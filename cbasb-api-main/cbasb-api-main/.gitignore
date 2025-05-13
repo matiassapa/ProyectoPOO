@@ -1,0 +1,69 @@
+
+# Logs
+*.log
+
+# Dependency directories
+**/node_modules/
+**/__pycache__/
+
+# Python
+*.pyc
+*.pyo
+*.pyd
+*.swp
+*.~*
+*.bak
+*.orig
+*.cover
+
+# Docker
+docker-compose.override.yml
+docker-compose.override.yaml
+**/docker-compose.override.yml
+**/docker-compose.override.yaml
+
+# Environment Variables
+**/.env
+.env.local
+.env.*
+
+# React Build
+**/build/
+**/dist/
+
+
+# IDEs/Editors
+.idea/
+.vscode/
+*.swp
+*.sublime-workspace
+*.sublime-project
+
+# Operating System Files
+.DS_Store
+Thumbs.db
+
+# Coverage
+coverage/
+**/coverage/
+.nyc_output/
+**/.nyc_output/
+
+# Temporary files
+tmp/
+temp/
+**/tmp/
+**/temp/
+*.tmp
+*.temp
+
+# Compiled Typescript
+*.tsbuildinfo
+*.map
+*.d.ts
+
+# Git
+**/.git/
+*.orig
+
+
