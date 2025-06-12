@@ -1,0 +1,88 @@
+
+services:
+  poo_mysql:
+    image: mysql:8.0
+    container_name: poo_mysql
+    restart: "always"
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    networks:
+      - app-network
+    deploy:
+      resources:
+        limits:
+          cpus: "1.0"
+          memory: "700M"
+        reservations:
+          cpus: "0.5"
+          memory: "400M"
+
+  poo_phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: poo_phpmyadmin
+    restart: "always"
+    ports:
+      - "8080:80"
+    environment:
+      PMA_HOST: poo_mysql
+      PMA_PORT: 3306
+      UPLOAD_LIMIT: 100M
+    networks:
+      - app-network
+    deploy:
+      resources:
+        limits:
+          cpus: "0.3"
+          memory: "200M"
+        reservations:
+          cpus: "0.1"
+          memory: "100M"
+
+  poo_api:
+    container_name: poo_api
+    restart: "always"
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./app:/app
+      - /etc/localtime:/etc/localtime:ro
+    environment:
+      TZ: America/Argentina/Cordoba
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+    env_file:
+      - .env
+    networks:
+      - app-network
+    working_dir: /app
+    command: >
+      uvicorn main:app --host 0.0.0.0 --port 8000 --reload
+    depends_on:
+      - poo_mysql
+    deploy:
+      resources:
+        limits:
+          cpus: "0.8"
+          memory: "600M"
+        reservations:
+          cpus: "0.4"
+          memory: "300M"
+
+
+networks:
+  app-network: {}
+
+volumes:
+  mysql_data: {}

@@ -1,0 +1,41 @@
+# Archivos de configuración sensibles
+.env
+*.env
+
+# Archivos de logs
+*.log
+
+# Archivos de Python compilados y cachés
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Entornos virtuales
+.venv/
+venv/
+ENV/
+
+# Archivos de bases de datos locales
+*.sqlite3
+*.db
+
+# Archivos creados por editores
+*.swp
+*.swo
+*.bak
+.DS_Store
+
+# Docker
+*.pid
+*.tar
+docker-compose.override.yml
+
+# VS Code
+.vscode/
+
+# Pytest / cobertura
+.coverage
+htmlcov/
+.tox/
+.cache/
+.pytest_cache/

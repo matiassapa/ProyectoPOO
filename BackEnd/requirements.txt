@@ -1,0 +1,10 @@
+fastapi
+uvicorn[standard]
+sqlalchemy
+python-dotenv
+openai
+pymysql
+python-jose
+python-multipart
+cryptography
+fpdf
