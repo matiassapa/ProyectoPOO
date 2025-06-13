@@ -46,7 +46,13 @@ Base de datos MySQL
 
 phpMyAdmin
 
-📁 Repositorio del backend: [enlace al repositorio backend]
+A continuación se incluirán los enlaces principales del proyecto:
+
+🌐 API FastAPI: [[enlace a las APIs](http://ec2-54-167-15-203.compute-1.amazonaws.com:8000/docs)]
+
+🛢️ Base de datos MySQL/phpMyAdmin: [[(http://ec2-54-167-15-203.compute-1.amazonaws.com:8080/)]]
+
+☁️ Instancia AWS: (https://us-east-1.console.aws.amazon.com/ec2/home?region=us-east-1#Instances)
 
 👨‍💻 Autores
 
