@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>RegistrationWindow</class>
+ <widget class="QWidget" name="RegistrationWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1000</width>
+    <height>700</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Registro - VYMTIA</string>
+  </property>
+  <layout class="QHBoxLayout" name="mainLayout">
+   <item>
+    <widget class="QWidget" name="formContainer">
+     <layout class="QVBoxLayout" name="formLayout">
+      <item><spacer name="verticalSpacerTop"><property name="orientation"><enum>Qt::Vertical</enum></property><property name="sizeHint" stdset="0"><size><width>20</width><height>40</height></size></property></spacer></item>
+      <item><widget class="QLabel" name="mainTitle"><property name="text"><string>🔱 VYMTIA 🔱</string></property><property name="alignment"><set>Qt::AlignCenter</set></property></widget></item>
+      <item><widget class="QLabel" name="subTitle"><property name="text"><string>Crear Cuenta</string></property><property name="alignment"><set>Qt::AlignCenter</set></property></widget></item>
+      <item><widget class="QPushButton" name="backToLoginButton"><property name="text"><string>¿Ya tenés una cuenta? Iniciar sesión</string></property><property name="flat"><bool>true</bool></property><property name="cursor"><cursorShape>PointingHandCursor</cursorShape></property></widget></item>
+
+      <!-- NUEVO ORDEN -->
+      <item><widget class="QLineEdit" name="firstNameLineEdit"><property name="placeholderText"><string>Nombre</string></property></widget></item>
+      <item><widget class="QLineEdit" name="lastNameLineEdit"><property name="placeholderText"><string>Apellido</string></property></widget></item>
+      <item><widget class="QLineEdit" name="usernameLineEdit"><property name="placeholderText"><string>Nombre de usuario</string></property></widget></item>
+      <item><widget class="QLineEdit" name="passwordLineEdit"><property name="echoMode"><enum>QLineEdit::Password</enum></property><property name="placeholderText"><string>Contraseña</string></property></widget></item>
+      <item><widget class="QLineEdit" name="emailLineEdit"><property name="placeholderText"><string>Correo electrónico</string></property></widget></item>
+
+      <item><widget class="QPushButton" name="registerButton"><property name="text"><string>Registrarse</string></property></widget></item>
+      <item><widget class="QLabel" name="footerLabel"><property name="text"><string>© 2025 VYMTIA™. Todos los derechos reservados. | Términos de servicio | Política de privacidad</string></property><property name="alignment"><set>Qt::AlignCenter</set></property></widget></item>
+      <item><spacer name="verticalSpacerBottom"><property name="orientation"><enum>Qt::Vertical</enum></property><property name="sizeHint" stdset="0"><size><width>20</width><height>40</height></size></property></spacer></item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QWidget" name="imageContainer">
+     <layout class="QVBoxLayout" name="imageLayout">
+      <item>
+       <widget class="QLabel" name="imageLabel">
+        <property name="pixmap">
+         <pixmap resource="resources.qrc">:/images/logoregistro.png</pixmap>
+        </property>
+        <property name="scaledContents"><bool>false</bool></property>
+        <property name="alignment"><set>Qt::AlignCenter</set></property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources><include location="resources.qrc"/></resources>
+ <connections/>
+</ui>

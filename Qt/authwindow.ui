@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AuthWindow</class>
+ <widget class="QWidget" name="AuthWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1217</width>
+    <height>1556</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <layout class="QHBoxLayout" name="mainLayout">
+   <item>
+    <layout class="QVBoxLayout" name="formLayout">
+     <item><spacer name="verticalSpacerTop"><property name="orientation"><enum>Qt::Vertical</enum></property><property name="sizeHint" stdset="0"><size><width>20</width><height>40</height></size></property></spacer></item>
+     <item><widget class="QLabel" name="mainTitle"><property name="text"><string>🔱 VYMTIA 🔱</string></property><property name="alignment"><set>Qt::AlignCenter</set></property></widget></item>
+     <item><widget class="QLabel" name="subTitle"><property name="text"><string>Iniciar sesión</string></property><property name="alignment"><set>Qt::AlignCenter</set></property></widget></item>
+     <item><widget class="QLineEdit" name="usernameLineEdit"><property name="placeholderText"><string>Usuario</string></property></widget></item>
+     <item><widget class="QLineEdit" name="passwordLineEdit"><property name="echoMode"><enum>QLineEdit::Password</enum></property><property name="placeholderText"><string>Contraseña</string></property></widget></item>
+     <item><widget class="QPushButton" name="authButton"><property name="text"><string>Iniciar Sesión</string></property></widget></item>
+     <item><widget class="QPushButton" name="toggleButton"><property name="text"><string>¿No tienes cuenta? Regístrate</string></property></widget></item>
+
+     <!-- NUEVO FOOTER -->
+     <item><widget class="QLabel" name="footerLabel"><property name="text"><string>© 2025 VYMTIA™. Todos los derechos reservados. | Términos de servicio | Política de privacidad</string></property><property name="alignment"><set>Qt::AlignCenter</set></property></widget></item>
+
+     <item><spacer name="verticalSpacerBottom"><property name="orientation"><enum>Qt::Vertical</enum></property><property name="sizeHint" stdset="0"><size><width>20</width><height>40</height></size></property></spacer></item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QVBoxLayout" name="imageLayout">
+     <item>
+      <widget class="QLabel" name="imageLabel">
+       <property name="sizePolicy"><sizepolicy hsizetype="Expanding" vsizetype="Expanding"><horstretch>0</horstretch><verstretch>0</verstretch></sizepolicy></property>
+       <property name="lineWidth"><number>2</number></property>
+       <property name="pixmap"><pixmap resource="resources.qrc">:/images/login.png</pixmap></property>
+       <property name="scaledContents"><bool>false</bool></property>
+       <property name="alignment"><set>Qt::AlignCenter</set></property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>
