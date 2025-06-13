@@ -1,0 +1,148 @@
+/* ========= ESTILOS GENERALES ========= */
+QWidget {
+    background-color: #0D1A2B;
+    color: white;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Campos de entrada */
+QLineEdit {
+    background-color: #0D1A2B;
+    border: 2px solid #C1272D;
+    border-radius: 6px;
+    padding: 8px;
+    font-size: 14px;
+    color: white;
+}
+
+QLineEdit:focus {
+    border: 2px solid #9E1F25;
+}
+
+QToolTip {
+    background-color: #0D1A2B;
+    color: white;
+    border: 1px solid #C1272D;
+}
+
+/* Botones generales */
+QPushButton {
+    background-color: #C1272D;
+    color: white;
+    border-radius: 6px;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+QPushButton:hover {
+    background-color: #9E1F25;
+}
+
+/* Botón estilo enlace */
+#backToLoginButton {
+    background-color: transparent;
+    border: none;
+    color: #B0B0B0;
+    font-size: 14px;
+    text-decoration: underline;
+    padding: 0px;
+    font-weight: normal;
+}
+
+#backToLoginButton:hover {
+    color: white;
+}
+
+/* Contenedor de formulario */
+#formContainer {
+    padding: 40px;
+    spacing: 20px;
+}
+
+#imageContainer {
+    background-color: #0D1A2B;
+}
+
+#imageLabel {
+    margin: 0px;
+    padding: 0px;
+    border: none;
+}
+
+/* ========= MAINWINDOW ESTILOS ESPECÍFICOS ========= */
+QWidget#MainWindow {
+    background-image: url(:/images/fondo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #0D1A2B; /* Fallback */
+}
+
+/* Texto de entrada del prompt */
+QTextEdit#promptTextEdit {
+    background-color: #192A3E;
+    color: white;
+    border: 1px solid #B0B0B0;
+    border-radius: 6px;
+    padding: 8px;
+    font-size: 14px;
+}
+
+/* Etiquetas */
+QLabel#mainTitle {
+    font-size: 28px;
+    font-weight: bold;
+    color: #FFD700;
+    margin-bottom: 10px;
+}
+
+QLabel#subTitle {
+    font-size: 18px;
+    color: #B0B0B0;
+    margin-bottom: 20px;
+}
+
+QLabel#outputLabel {
+    font-style: italic;
+    color: #CCCCCC;
+    padding: 4px;
+}
+
+/* Tabla de tareas */
+QTableWidget {
+    background-color: #192A3E;
+    color: white;
+    border: 1px solid #B0B0B0;
+    gridline-color: #B0B0B0;
+}
+
+QHeaderView::section {
+    background-color: #C1272D;
+    color: white;
+    font-weight: bold;
+    padding: 6px;
+    border: 1px solid #B0B0B0;
+}
+
+/* Botones del MainWindow */
+QPushButton#generateButton {
+    background-color: #C1272D;
+    color: white;
+}
+
+QPushButton#generateButton:hover {
+    background-color: #9E1F25;
+}
+
+QPushButton#logoutButton,
+QPushButton#exportCsvButton,
+QPushButton#exportPdfButton {
+    background-color: #404040;
+    color: white;
+}
+
+QPushButton#logoutButton:hover,
+QPushButton#exportCsvButton:hover,
+QPushButton#exportPdfButton:hover {
+    background-color: #666666;
+}
